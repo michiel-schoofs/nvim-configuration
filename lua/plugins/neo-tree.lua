@@ -14,10 +14,5 @@ return {
         require("neo-tree").setup(opts)
 	vim.cmd("Neotree left")
     end,
-    keys = {
-	{ "<leader>ft", "<cmd>Neotree left toggle<cr>", desc = "Toggle file explorer" },
-	{ "<leader>fb", "<cmd>Neotree buffers float toggle<cr>", desc="Toggle open buffers explorer" },
-	{ "<leader>fg", "<cmd>Neotree git_status float toggle<cr>", desc="Toggle git changes overview" }
-    },
     priority = 50
 }
