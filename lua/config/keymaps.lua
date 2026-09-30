@@ -9,6 +9,6 @@ wk.add({
 	{ "<leader>fg", builtin.live_grep, desc = "Find content" },
 
 	{ "<leader>b", group = "buffer" },
-	{ "<leader>bn", "<cmd>BufferNext<cr>", desc="Move to the next buffer" },
-	{ "<leader>bp", "<cmd>BufferPrevious<cr>", desc="Move back to the previous buffer" }
+	{ "<leader>bn", "<cmd>BufferNext<cr>", desc = "Move to the next buffer" },
+	{ "<leader>bp", "<cmd>BufferPrevious<cr>", desc = "Move back to the previous buffer" },
 })

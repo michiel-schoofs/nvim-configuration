@@ -10,5 +10,7 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "WinEnter" }, {
 			vim.wo.relativenumber = true
 			vim.wo.number = true
 		end
-	end
+	end,
 })
+
+vim.opt.tabstop = 3

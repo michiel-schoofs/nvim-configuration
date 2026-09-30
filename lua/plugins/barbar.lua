@@ -2,7 +2,7 @@ return {
 	"romgrk/barbar.nvim",
 	dependencies = {
 		"lewis6991/gitsigns.nvim",
-		"nvim-tree/nvim-web-devicons"
+		"nvim-tree/nvim-web-devicons",
 	},
 	init = function()
 		vim.g.barbar_auto_setup = false
@@ -14,8 +14,8 @@ return {
 		insert_at_end = true,
 		semantic_letters = true,
 		sidebar_filetypes = {
-			['neo-tree'] = {event = 'BufWipeout'}
-		}
+			["neo-tree"] = { event = "BufWipeout" },
+		},
 	},
 	priority = 60,
 	version = "^1.0.0",
