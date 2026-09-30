@@ -9,6 +9,21 @@ return {
     lazy = false,
     opts = {
         close_if_last_window = true,
+	default_component_configs = {
+	git_status = {
+		symbols = {
+			added = "",
+			modified = "󰤌",
+			deleted = "",
+			renamed = "",
+			untracked = "󱓌",
+			ignored = "󱓌",
+			unstaged = "󱓋",
+			staged = "󱓏",
+			conflict = ""
+		}
+	}
+}
     },
     config = function(_, opts)
         require("neo-tree").setup(opts)

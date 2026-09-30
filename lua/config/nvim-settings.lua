@@ -1,3 +1,7 @@
+--Set clipboard to also use the system defined one
+vim.opt.clipboard = "unnamedplus"
+
+--Ensure that all non neo-tree windows have line numbers enabled
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "WinEnter" }, {
 	group = vim.api.nvim_create_augroup("EnsureLineNumbers", { clear = true }),
 	pattern = "*",
