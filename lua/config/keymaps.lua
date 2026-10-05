@@ -14,4 +14,26 @@ wk.add({
 	{ "<leader>m", group = "Mason" },
 	{ "<leader>mi", "<cmd>Mason<cr>", desc = "Open Mason" },
 	{ "<leader>mu", "<cmd>MasonUpdate<cr>", desc = "Update Mason packages" },
+	{ "<leader>r", group = "rust" },
+	{ "<leader>rt", "<cmd>RustLsp codeAction<cr>", desc = "Run rust-analyzer code action" },
+	{ "<leader>c", group = "cargo" },
+	{ "<leader>ct", "<cmd>RustLsp openCargo<cr>", desc = "Open Cargo.toml" },
+	{ "<leader>cr", "<cmd>RustLsp run<cr>", desc = "Run cargo run" },
+	{
+		"<leader>ra",
+		function()
+			vim.cmd.RustLsp("codeAction")
+		end,
+		desc = "Run rust-analyzer code action",
+	},
 })
+
+local bufnr = vim.api.nvim_get_current_buf()
+vim.keymap.set(
+	"n",
+	"K", -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
+	function()
+		vim.cmd.RustLsp({ "hover", "actions" })
+	end,
+	{ silent = true, buffer = bufnr }
+)

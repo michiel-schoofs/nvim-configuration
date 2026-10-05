@@ -5,7 +5,7 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	opts = {
-		ensure_installed = { "stylua", "lua_ls" },
+		ensure_installed = { "lua_ls", "rust_analyzer" },
 		automatic_enable = true,
 	},
 }
