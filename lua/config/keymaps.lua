@@ -7,8 +7,11 @@ wk.add({
 	{ "<leader>fg", "<cmd>Neotree git_status float toggle<cr>", desc = "Toggle git changes overview" },
 	{ "<leader>ff", builtin.find_files, desc = "Find files" },
 	{ "<leader>fg", builtin.live_grep, desc = "Find content" },
-
 	{ "<leader>b", group = "buffer" },
 	{ "<leader>bn", "<cmd>BufferNext<cr>", desc = "Move to the next buffer" },
 	{ "<leader>bp", "<cmd>BufferPrevious<cr>", desc = "Move back to the previous buffer" },
+	{ "<leader>bf", "<cmd>Format<cr>", desc = "Format current buffer" },
+	{ "<leader>m", group = "Mason" },
+	{ "<leader>mi", "<cmd>Mason<cr>", desc = "Open Mason" },
+	{ "<leader>mu", "<cmd>MasonUpdate<cr>", desc = "Update Mason packages" },
 })
