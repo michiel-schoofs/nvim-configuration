@@ -6,6 +6,8 @@ return {
 	},
 	opts = {
 		ensure_installed = { "lua_ls", "rust_analyzer" },
-		automatic_enable = true,
+		automatic_enable = {
+			exclude = { "rust_analyzer" },
+		},
 	},
 }

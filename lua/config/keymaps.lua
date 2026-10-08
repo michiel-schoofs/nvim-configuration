@@ -14,18 +14,16 @@ wk.add({
 	{ "<leader>m", group = "Mason" },
 	{ "<leader>mi", "<cmd>Mason<cr>", desc = "Open Mason" },
 	{ "<leader>mu", "<cmd>MasonUpdate<cr>", desc = "Update Mason packages" },
+	{ "<leader>d", group = "debug" },
+	{ "<leader>ds", "<cmd>Telescope diagnostics<cr>", desc = "Show diagnostics" },
+	{ "<leader>do", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Show diagnostics in a floating window" },
+	{ "<leader>dn", "<cmd>lua vim.diagnostic.goto_next()<cr>", desc = "Go to next diagnostic" },
+	{ "<leader>dp", "<cmd>lua vim.diagnostic.goto_prev()<cr>", desc = "Go to previous diagnostic" },
 	{ "<leader>r", group = "rust" },
 	{ "<leader>rt", "<cmd>RustLsp codeAction<cr>", desc = "Run rust-analyzer code action" },
 	{ "<leader>c", group = "cargo" },
 	{ "<leader>ct", "<cmd>RustLsp openCargo<cr>", desc = "Open Cargo.toml" },
 	{ "<leader>cr", "<cmd>RustLsp run<cr>", desc = "Run cargo run" },
-	{
-		"<leader>ra",
-		function()
-			vim.cmd.RustLsp("codeAction")
-		end,
-		desc = "Run rust-analyzer code action",
-	},
 })
 
 local bufnr = vim.api.nvim_get_current_buf()
